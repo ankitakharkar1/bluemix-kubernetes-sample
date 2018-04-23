@@ -14,7 +14,7 @@ export PATH="/tmp/Bluemix_CLI/bin:$PATH"
 # Install Armada CS plugin
 var1=yes
 echo "Install the Bluemix container-service plugin"
-bx plugin install container-service -r Bluemix
+bx plugin install container-service -r Bluemix yes
 echo "$var1"
 
 echo "Install kubectl"
