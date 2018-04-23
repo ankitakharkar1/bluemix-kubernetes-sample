@@ -16,6 +16,8 @@ echo "Deploy pods"
 
 echo "bx login -a $CF_TARGET_URL"
 bx login -a "$CF_TARGET_URL" -u "$BLUEMIX_USER" -p "$BLUEMIX_PASSWORD" -c "$BLUEMIX_ACCOUNT" -o "$CF_ORG" -s "$CF_SPACE --sso"
+bluemix iam api-key-create NAME --file C:\Ankita\new.txt
+bluemix login --apikey @C:\Ankita\new.txt
 if [ $? -ne 0 ]; then
   echo "Failed to authenticate to Bluemix"
   exit 1
